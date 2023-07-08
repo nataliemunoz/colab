@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-j@o(4r=9pgc04sh^0c)jmp!)x9_=ex62in=l7mjky=+490yjff
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'academy.apps.AcademyConfig',
+    'security.apps.SecurityConfig'
 ]
 
 MIDDLEWARE = [
@@ -54,7 +56,7 @@ ROOT_URLCONF = 'colabapp.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['./colabapp/templates'], #defino la ruta del index
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
