@@ -1,20 +1,22 @@
 from django.db import models
+from django.contrib.auth.models import User #importa las caracterisitcas del modelo user
 
 # Create your models here.
 
-class Teacher(models.Model):
-    first_name=models.CharField(max_length=128)
-    last_name=models.CharField(max_length=128)
+class Teacher(User):
+    #first_name=models.CharField(max_length=128)
+    #last_name=models.CharField(max_length=128)
     bio = models.CharField(max_length=500)
 
 class Course(models.Model):
     name = models.CharField(max_length=128)
     description = models.CharField(max_length=500)
 
-class Student(models.Model):
-    first_name = models.CharField(max_length=128)
-    last_name = models.CharField(max_length=128)
-    email = models.CharField(max_length=128)
+class Student(User):
+    #first_name = models.CharField(max_length=128)
+    #last_name = models.CharField(max_length=128)
+    #email = models.CharField(max_length=128)
+    pass
 
 class Subject(models.Model):
     course = models.ForeignKey(Course, on_delete=models.PROTECT)
