@@ -36,6 +36,7 @@ este es un comentario
                         <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
                         <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
                         <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'admin:logout' %}">Salir</a></li>
                     </ul>
                 </div>
             </div>
@@ -61,6 +62,14 @@ este es un comentario
         <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
         <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
         <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+        <script>
+                var myAlert = document.getElementById('myAlert')
+                myAlert.addEventListener('closed.bs.alert', function () {
+                // do something, for instance, explicitly move focus to the most appropriate element,
+                // so it doesn't get lost/reset to the start of the page
+                // document.getElementById('...').focus()
+                })
+        </script>
     </body>
 </html>
 
